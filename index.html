@@ -67,6 +67,73 @@
             display: flex;
             align-items: center;
         }
+
+        .header-carousel .owl-prev,
+        .header-carousel .owl-next {
+            background-color: #d41919 !important;
+            border-radius: 50%;
+            /* optional: make them round */
+            width: 50px;
+            /* adjust size */
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Change arrow icons color (if they're using ::before content) */
+        .header-carousel .owl-prev span,
+        .header-carousel .owl-next span {
+            color: #fff !important;
+            /* white arrow inside */
+            font-size: 24px;
+            /* make arrow bigger */
+        }
+
+        /* Override Bootstrap primary button color */
+        .btn-primary {
+            background: linear-gradient(90deg, #2f6ae9, #4f339b) !important;
+            /* blue gradient */
+            border: none !important;
+            color: #fff !important;
+            /* ensure text stays white */
+        }
+
+        /* Hover effect with a darker blue gradient */
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #0056b3, #0096d6) !important;
+            border: none !important;
+            color: #fff !important;
+        }
+
+        .text-secondary {
+            color: #d41919 !important;
+        }
+
+        h1.display-3 {
+            font-size: 2.5rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+        }
+
+        .display-2 {
+            font-size: 2.5rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+            /* optional for better spacing */
+        }
+
+        .display-4 {
+            font-size: 2rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+        }
+
+        .display-1 {
+            font-size: 3rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+        }
     </style>
     <!-- CSS for smooth rotation -->
     <style>
@@ -104,6 +171,22 @@
 
         .w-80 {
             width: 80%;
+        }
+
+        .team-card {
+            height: 730px;
+            /* fixed height for all cards */
+            /* hides any text that goes beyond */
+        }
+
+        .team-card img {
+            width: 450px;
+            /* increase/decrease as you like */
+            height: 450px;
+            object-fit: cover;
+            margin: auto;
+            border-radius: 16px;
+            /* adjust roundness */
         }
     </style>
     <!-- JS for Plus/Minus Toggle -->
@@ -570,184 +653,85 @@
 
 
     <!-- Team Start -->
-    <div class="container-fluid team bg-white py-5">
+    <div class="container-fluid team py-5">
         <div class="container py-5">
-            <div class="pb-5">
+            <div class="pb-5 text-center">
                 <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Our Leadership and
                     People</h4>
-                <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">We hear over and over again that it feels
+                <h1 class="display-4 mb-0 wow fadeInUp" data-wow-delay="0.3s">We hear over and over again that it feels
                     different to work with us.</h1>
             </div>
 
-            <div class="container-fluid my-5">
-                <div class="d-flex justify-content-center">
-                    <div class="team-box d-flex border rounded shadow overflow-hidden" style="height: 600px;">
+            <!-- Owl Carousel -->
+            <div class="team-carousel owl-carousel wow fadeInUp" data-wow-delay="0.5s">
 
-                        <!-- Left Section (40%) -->
-                        <div class="w-20 bg-light overflow-auto p-3" style="flex: 0 0 20%;">
-                            <div class="d-flex flex-column align-items-center mb-4">
-                                <img src="img/team-1.jpg" class="rounded-square mb-2" alt="Person 1">
-                                <h6 class="text-center">John Doe</h6>
-                            </div>
-                            <div class="d-flex flex-column align-items-center mb-4">
-                                <img src="img/team-2.jpg" class="rounded-square mb-2" alt="Person 2">
-                                <h6 class="text-center">Jane Smith</h6>
-                            </div>
-                            <div class="d-flex flex-column align-items-center mb-4">
-                                <img src="img/team-3.jpg" class="rounded-square mb-2" alt="Person 3">
-                                <h6 class="text-center">Michael Lee</h6>
-                            </div>
-                            <div class="d-flex flex-column align-items-center mb-4">
-                                <img src="img/team-2.jpg" class="rounded-square mb-2" alt="Person 2">
-                                <h6 class="text-center">Jane Smith</h6>
-                            </div>
-                            <div class="d-flex flex-column align-items-center mb-4">
-                                <img src="img/team-1.jpg" class="rounded-square mb-2" alt="Person 2">
-                                <h6 class="text-center">Jane Smith</h6>
-                            </div>
-                            <!-- Add more as needed -->
-                        </div>
-
-                        <!-- Right Section (60%) -->
-                        <div class="w-80 p-4 bg-white d-flex align-items-center" style="flex: 0 0 80%;">
-                            <div class="d-flex align-items-start">
-                                <!-- Bigger Image -->
-                                <img src="img/team-1.jpg" class="rounded-square big-square me-4" alt="Large Person">
-
-                                <!-- Text Content -->
-                                <div>
-                                    <h3 class="fw-bold mb-3">John Doe</h3>
-                                    <p class="mb-0 text-primary">Director General , IIFOMAS</p>
-                                    <p class="text-muted fs-5">
-                                        John is a dedicated leader in mine action, bringing over 15 years of
-                                        expertise in
-                                        safety and humanitarian efforts. He has overseen multiple international
-                                        missions
-                                        focusing on demining operations, survivor assistance, and policy advocacy.
-                                    </p>
-                                    <p class="text-muted fs-5">
-                                        His work continues to inspire many in the field of peacebuilding, ensuring
-                                        safer
-                                        communities and sustainable development in post-conflict regions.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <!-- Person 1 -->
+                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                    <img src="img/team-1.jpg" class="img-fluid rounded mb-3" alt="Person 1" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">John Doe <span class="text-muted">— CEO</span></h5>
+                    <p class="small text-justify mb-0">
+                        Maj Gen Ajay Seth, VSM (Retd) was commissioned in Garhwal Rifles Regiment of Indian Army in
+                        December 1982. He has served in Op Blue Star and has done number of challenging tenures in
+                        Counter Insurgency including commanding an Infantry Battalion and Rashtriya Rifles Sector. As
+                        Additional Director General International Cooperation, he steered Defense Cooperation with Armed
+                        Forces of foreign countries. Post superannuation he has been delivering talks and writing
+                        articles.
+                    </p>
                 </div>
+
+                <!-- Person 2 -->
+                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                    <img src="img/team-2.jpg" class="img-fluid rounded mb-3" alt="Person 2" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">Jane Smith <span class="text-muted">— Director</span></h5>
+                    <p class="small text-justify mb-0">
+                        With a master’s degree in human resources & management, Mr. Nadeem Saleem has rich professional
+                        experience of 18 years. During these years, he has worked and helped companies recruit for short
+                        and long-term projects. Mr. Nadeem has recruited an overall manpower of around 12000 people
+                        across the world, including India, Nepal, Bangladesh, Sri Lanka, USA, Canada, Tunisia, Cambodia,
+                        Pakistan, Saudi, Egypt, Singapore, Malaysia, Serra Leon, Mozambique, Zimbabwe, and South Africa.
+                        He is Director HR, Admin and Logistics in Horizon.
+                    </p>
+                </div>
+
+                <!-- Person 3 -->
+                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                    <img src="img/team-3.jpg" class="img-fluid rounded mb-3" alt="Person 3" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">Michael Lee <span class="text-muted">— Research Head</span></h5>
+                    <p class="small text-justify mb-0">
+                        Ms. Eishna Mittal Coetzee is a seasoned finance professional with a diverse background in
+                        logistics, humanitarian aid, and sustainable energy. She has held key leadership roles in
+                        various organizations and is currently the Director of Finance and Business Development at
+                        Horizon. With a strong commitment to social impact, she is also involved in philanthropic
+                        initiatives and is the founder of Human Library Pune.
+                    </p>
+                </div>
+
+                <!-- Person 4 -->
+                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                    <img src="img/team-4.jpg" class="img-fluid rounded mb-3" alt="Person 4" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">Sophia Brown <span class="text-muted">— Program Manager</span></h5>
+                    <p class="small text-justify mb-0">
+                        Colonel Navneet MP Mittal, is the Director General and Founder of IIFOMAS. A retired Indian Army
+                        officer with over 42 years of experience in combat, corporate, and NGO sectors, he pioneered
+                        humanitarian demining in India, founding Horizon as the country’s first organization for
+                        post-conflict environment management by Indian ex-servicemen in 2001. Col. Mittal, an alumnus of
+                        the National Defence Academy, was commissioned into 54 Engineer Regiment. He has been recognized
+                        for his distinguished service and has held several key roles, including as Chief Humanitarian
+                        Officer with the United Nations. He has led numerous international mine clearance projects and
+                        is Chairman & Co-Founder, Horizon Group.
+                    </p>
+                </div>
+
             </div>
         </div>
-        <!-- <div class="team-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-img bg-secondary rounded-top">
-                        <img src="img/team-1.jpg" class="team-portrait" alt="Image">
-                        <div class="team-icon">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center p-4">
-                        <a href="#" class="h4">Col Navneet MP Mittal (Retd)</a>
-                        <p class="mb-0 text-primary">Director General , IIFOMAS</p>
-                        <p class="mb-0 text-muted small">
-                            Colonel Navneet MP Mittal, is the Director General and Founder of IIFOMAS. A retired Indian
-                            Army officer with over 42 years of experience in combat, corporate, and NGO sectors, he
-                            pioneered humanitarian demining in India, founding Horizon as the country’s first
-                            organization for post-conflict environment management by Indian ex-servicemen in 2001. Col.
-                            Mittal, an alumnus of the National Defence Academy, was commissioned into 54 Engineer
-                            Regiment. He has been recognized for his distinguished service and has held several key
-                            roles, including as Chief Humanitarian Officer with the United Nations. He has led numerous
-                            international mine clearance projects and is Chairman & Co-Founder, Horizon Group.
-                        </p>
-                    </div>
-                </div>
-                <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-img bg-secondary rounded-top">
-                        <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                        <div class="team-icon">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center p-4">
-                        <a href="#" class="h4">Maj Gen Ajay Seth, VSM, (Retd)</a>
-                        <p class="mb-0 text-primary">Expert Member</p>
-                    </div>
-                </div>
-                <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-img bg-secondary rounded-top">
-                        <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                        <div class="team-icon">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center p-4">
-                        <a href="#" class="h4">Ms. Eishna Mittal Coetzee</a>
-                        <p class="mb-0 text-primary">Gender Mainstreaming</p>
-                    </div>
-                </div>
-                <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.7s">
-                    <div class="team-img bg-secondary rounded-top">
-                        <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                        <div class="team-icon">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center p-4">
-                        <a href="#" class="h4">Tesfazghi (Tess) Tewelde</a>
-                        <p class="mb-0 text-primary">Technical Member</p>
-                    </div>
-                </div>
-                <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.9s">
-                    <div class="team-img bg-secondary rounded-top">
-                        <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                        <div class="team-icon">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i
-                                    class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="team-content text-center p-4">
-                        <a href="#" class="h4">Mr. Nadeem Saleem</a>
-                        <p class="mb-0 text-primary">Humanitarian Relief</p>
-                    </div>
-                </div>
-            </div> -->
-    </div>
     </div>
     <!-- Team End -->
+
+
 
     <!-- FAQ Start -->
     <div class="container-fluid py-5 bg-light">
@@ -1145,7 +1129,8 @@
                             <a class="btn btn-lg-square btn-primary rounded-circle mx-2" href=""><i
                                     class="fas fa-map-marker-alt"></i></a>
                             <div class="text-white ms-2">
-                                <p class="mb-0"> 0301, Stilt Floor 3, Tower B6, Blue Ridge Township, Hinjewadi, Pune, India, 411057</p>
+                                <p class="mb-0"> 0301, Stilt Floor 3, Tower B6, Blue Ridge Township, Hinjewadi, Pune,
+                                    India, 411057</p>
                             </div>
                         </div>
                         <div class="d-flex align-items-center mb-3">
@@ -1314,6 +1299,67 @@
         });
 
 
+    </script>
+
+    <!-- Initialize Carousel -->
+    <script>
+        $(document).ready(function () {
+            $('.team-carousel').owlCarousel({
+                loop: true,
+                margin: 30,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                dots: false,
+                nav: true,
+                navText: [
+                    '<i class="fas fa-chevron-left"></i>',
+                    '<i class="fas fa-chevron-right"></i>'
+                ],
+                responsive: {
+                    0: { items: 1 },
+                    768: { items: 2 }
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        $(function () {
+            var $c = $('.training-carousel');
+
+            // If already initialized by some other script, destroy it first
+            if ($c.hasClass('owl-loaded')) {
+                $c.trigger('destroy.owl.carousel');
+                // unwrap Owl's structure so re-init works cleanly
+                $c.removeClass('owl-loaded owl-hidden');
+                $c.find('.owl-stage-outer').children().unwrap();
+            }
+
+            // Re-init with your settings
+            $c.owlCarousel({
+                items: 4,                 // desktop fallback
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoWidth: false,         // make sure width is controlled by "items"
+                responsiveRefreshRate: 50,
+                 navText: [
+    '<i class="fa fa-chevron-left"></i>',
+    '<i class="fa fa-chevron-right"></i>'
+  ],
+                responsive: {
+                    0: { items: 1 },
+                    576: { items: 2 },
+                    768: { items: 3 },
+                    992: { items: 3 },
+                    1200: { items: 3 }       // cap at 4 even on very wide screens
+                }
+            });
+        });
     </script>
 
 </body>
