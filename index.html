@@ -174,15 +174,25 @@
         }
 
         .team-card {
-            height: 730px;
-            /* fixed height for all cards */
-            /* hides any text that goes beyond */
+            max-width: 98%;
+            margin: auto;
+            padding: 0px;
+        }
+
+        .team-card h5 {
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .team-card p {
+            text-align: justify;
+            font-size: 15px;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
 
         .team-card img {
             width: 450px;
             /* increase/decrease as you like */
-            height: 450px;
+            height: auto;
             object-fit: cover;
             margin: auto;
             border-radius: 16px;
@@ -256,10 +266,16 @@
             background: #b91515 !important;
         }
 
+        .team-carousel {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
 
         /* nav container above */
-        .team-carousel .owl-nav {
-            position: absolute;
+        .team-carousel .owl-nav {            
             top: -50px;
             /* adjust vertical position */
             width: 100%;
@@ -269,14 +285,14 @@
         .team-carousel .owl-nav .owl-prev,
         .team-carousel .owl-nav .owl-next {
 
-          
+
             background: #d41919 !important;
             cursor: pointer;
         }
 
         /* icons */
         .team-carousel .owl-nav i {
-            color: #fff !important;           
+            color: #fff !important;
         }
 
         /* hover */
@@ -718,7 +734,7 @@
             <div class="team-carousel owl-carousel wow fadeInUp" data-wow-delay="0.5s">
 
                 <!-- Person 1 -->
-                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                <div class="team-card bg-white rounded shadow p-4 text-center">
                     <img src="img/team-1.jpg" class="img-fluid rounded mb-3" alt="Person 1" object-fit:cover;
                         margin:auto;">
                     <h5 class="fw-bold mb-1">John Doe <span class="text-muted">— CEO</span></h5>
@@ -733,7 +749,7 @@
                 </div>
 
                 <!-- Person 2 -->
-                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                <div class="team-card bg-white rounded shadow p-4 text-center">
                     <img src="img/team-2.jpg" class="img-fluid rounded mb-3" alt="Person 2" object-fit:cover;
                         margin:auto;">
                     <h5 class="fw-bold mb-1">Jane Smith <span class="text-muted">— Director</span></h5>
@@ -748,7 +764,7 @@
                 </div>
 
                 <!-- Person 3 -->
-                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                <div class="team-card bg-white rounded shadow p-4 text-center">
                     <img src="img/team-3.jpg" class="img-fluid rounded mb-3" alt="Person 3" object-fit:cover;
                         margin:auto;">
                     <h5 class="fw-bold mb-1">Michael Lee <span class="text-muted">— Research Head</span></h5>
@@ -1066,7 +1082,7 @@
     <!-- Contact Us Start -->
     <div class="container-fluid contact-us py-5 bg-light">
         <div class="container py-5">
-            <div class="pb-5 text-center">
+            <div class="pb-5 text-left">
                 <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Get in Touch</h4>
                 <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Contact Us</h1>
             </div>
