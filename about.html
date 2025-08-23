@@ -28,6 +28,70 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+
+           <style>
+        
+        .team-carousel {
+            width: 100%;
+            height: auto;
+            background: #f8f9fa;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+        /* nav container above */
+        .team-carousel .owl-nav {            
+            top: -50px;
+            /* adjust vertical position */
+            width: 100%;
+        }
+
+        /* arrow buttons */
+        .team-carousel .owl-nav .owl-prev,
+        .team-carousel .owl-nav .owl-next {
+
+
+            background: #d41919 !important;
+            cursor: pointer;
+        }
+
+        /* icons */
+        .team-carousel .owl-nav i {
+            color: #fff !important;
+        }
+
+        /* hover */
+        .team-carousel .owl-nav .owl-prev:hover,
+        .team-carousel .owl-nav .owl-next:hover {
+            background: #b91515 !important;
+        }
+
+         .team-card {
+            max-width: 98%;
+            margin: auto;
+            padding: 0px;
+        }
+
+        .team-card h5 {
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .team-card p {
+            text-align: justify;
+            font-size: 15px;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .team-card img {
+            width: 450px;
+            /* increase/decrease as you like */
+            height: 450px;
+            object-fit: cover;
+            margin: auto;
+            border-radius: 16px;
+            /* adjust roundness */
+        }
+    </style>
     </head>
 
     <body>
@@ -40,265 +104,242 @@
         </div>
         <!-- Spinner End -->
 
+<!-- header.html -->
+<!-- Topbar Start -->
+<div class="container-fluid bg-secondary top-bar px-5 d-none d-lg-block">
+  <div class="row gx-0 align-items-center" style="height: 45px;">
 
-        <!-- Topbar Start -->
-        <div class="container-fluid bg-secondary px-5 d-none d-lg-block">
-            <div class="row gx-0 align-items-center" style="height: 45px;">
-                <div class="col-lg-8 text-center text-lg-start mb-lg-0">
-                    <div class="d-flex flex-wrap">
-                        <a href="#" class="text-light me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Find A Location</a>
-                        <a href="#" class="text-light me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+01234567890</a>
-                        <a href="#" class="text-light me-0"><i class="fas fa-envelope text-primary me-2"></i>Example@gmail.com</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end">
-                    <div class="d-flex justify-content-end">
-                        <div class="border-end border-start py-1">
-                            <a href="#" class="btn text-primary"><i class="fab fa-facebook-f"></i></a>
-                        </div>
-                        <div class="border-end py-1">
-                            <a href="#" class="btn text-primary"><i class="fab fa-twitter"></i></a>
-                        </div>
-                        <div class="border-end py-1">
-                            <a href="#" class="btn text-primary"><i class="fab fa-instagram"></i></a>
-                        </div>
-                        <div class="border-end py-1">
-                            <a href="#" class="btn text-primary"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Left -->
+    <div class="col-lg-6 text-center text-lg-start mb-lg-0">
+      <span class="text-light fw-bold">
+        IIFOMAS Symposium 2025 is in the works! Watch this space for date and venue announcements — coming November 2025.
+      </span>
+    </div>
+
+    <!-- Right -->
+    <div class="col-lg-6 text-center text-lg-end">
+      <div class="d-flex justify-content-end align-items-center">
+        <div class="d-flex">
+          <div class="border-start py-1"><a href="#" class="btn text-primary"><i class="fab fa-facebook-f"></i></a></div>
+          <div class="border-start py-1"><a href="#" class="btn text-primary"><i class="fab fa-twitter"></i></a></div>
+          <div class="border-start py-1"><a href="#" class="btn text-primary"><i class="fab fa-instagram"></i></a></div>
+          <div class="border-start py-1"><a href="#" class="btn text-primary"><i class="fab fa-linkedin-in"></i></a></div>
         </div>
-        <!-- Topbar End -->
+      </div>
+    </div>
 
+  </div>
+</div>
+<!-- Topbar End -->
 
-        <!-- Navbar & Hero Start -->
-        <div class="container-fluid position-relative p-0">
-            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-                <a href="#" class="navbar-brand p-0">
-                    <h1 class="text-primary m-0"><i class="fas fa-biohazard me-3"></i>JustDance</h1>
-                    <!-- <img src="img/logo.png" alt="Logo"> -->
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="fa fa-bars"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto py-0">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link active">About</a>
-                        <a href="event.html" class="nav-item nav-link">Events</a>
-                        <a href="blog.html" class="nav-item nav-link">Blogs</a>
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                            <div class="dropdown-menu m-0">
-                                <a href="classes.html" class="dropdown-item">Our classes</a>
-                                <a href="training.html" class="dropdown-item">Dance Training</a>
-                                <a href="team.html" class="dropdown-item">Our Team</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="gallery.html" class="dropdown-item">Dance Gallery</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-                    </div>
-                    <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 flex-wrap flex-sm-shrink-0">Register Now</a>
-                </div>
-            </nav>
-        </div>
-        <!-- Navbar & Hero End -->
+<!-- Navbar Start -->
+<div class="container-fluid position-relative p-0">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+    <a href="index.html" class="navbar-brand p-0">
+      <img src="img/iifomas-logo.png" alt="Logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+      <span class="fa fa-bars"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <div class="d-flex align-items-center ms-auto me-4">
+        <a href="#" class="text-dark me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Pune, India</a>
+        <a href="#" class="text-dark me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91 8459273764</a>
+        <a href="mailto:info@iifomas.org" class="text-dark me-4"><i class="fas fa-envelope text-primary me-2"></i>info@iifomas.org</a>
+      </div>
+
+      <div class="navbar-nav py-0">
+        <a href="index.html" class="nav-item nav-link active">Home</a>
+        <a href="about.html" class="nav-item nav-link">About</a>
+        <a href="event.html" class="nav-item nav-link">Events</a>
+        <a href="offerings.html" class="nav-item nav-link">Offerings</a>
+        <a href="blog.html" class="nav-item nav-link">Articles</a>
+        <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+      </div>
+
+      <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-lg-4">Register Now</a>
+    </div>
+  </nav>
+</div>
+<!-- Navbar End -->
+
 
 
         <!-- Header Start -->
         <div class="container-fluid bg-breadcrumb">
             <div class="container text-center py-5" style="max-width: 900px;">
-                <h3 class="text-primary display-3 wow fadeInDown" data-wow-delay="0.1s">About Us</h1>
-                <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
-                    <li class="breadcrumb-item"><a href="index.html" class="text-dark">Home</a></li>
-                    <li class="breadcrumb-item"><a href="#" class="text-dark">Pages</a></li>
-                    <li class="breadcrumb-item active text-primary">About</li>
-                </ol>    
+                <h3 class="text-primary display-3 wow fadeInDown" data-wow-delay="0.1s">About Us</h1>                
             </div>
         </div>
         <!-- Header End -->
 		
+         <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row g-5 align-items-start">
+                <!-- Left Image -->
+                <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
+                    <div class="position-relative border bg-secondary rounded p-0">
 
-        <!-- Banner Start -->
-        <div class="container-fluid bg-secondary wow zoomInDown" data-wow-delay="0.1s">
-            <div class="container">
-                <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center text-center p-5">
-                    <h1 class="me-4"><span class="fw-normal">Join us today for </span><span> your first dance</span></h1>
-                    <a href="#" class="text-white fw-bold fs-2"> <i class="fa fa-phone me-1"></i> 714-783-2205</a>
+                        <!-- Image (top aligned, no padding) -->
+                        <img src="img/people.jpg" class="img-fluid w-100 rounded-top d-block" alt="Image">
+
+                        <!-- Overlapping Box (projecting outside bottom-left) -->
+                        <div class="position-absolute bg-light shadow-lg p-4 rounded"
+                            style="bottom: -30px; left: 20px; width: 80%; max-width: 280px;">
+                            <p class="mb-0 small text-muted">
+                                Col Navneet MP Mittal (Retd) Chairman, Horizon Group and IIFOMAS, with H.E. Dr. Anupam
+                                Ray, Ambassador and permanent Representative of India to Conference on Disarmament, at
+                                UN HQs.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+                <!-- Right Content -->
+                <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
+                    <h4 class="text-secondary sub-title fw-bold">ABOUT IIFOMAS</h4>
+                    <h1 class="display-3 mb-4">
+                        <strong class="text-primary">IIFOMAS</strong> (India International Forum on Mine Action and
+                        Safety)
+                    </h1>
+                    <p>
+                        India International Forum on Mine Action and Safety (IIFOMAS), is an independent Indian think
+                        tank on Global Mine Action Scenario and Demilitarization of obsolete and abandoned weapons and
+                        explosive devices (DEMIL). As India’s premier think tank for mine action, IIFOMAS unites
+                        experts, government bodies, and international organizations to strategize, innovate, and
+                        implement sustainable solutions for mine clearance, community safety, and humanitarian aid.
+                    </p>
+                    <p class="mb-4">
+                        Knowledge gained by IIFOMAS will assist in strategizing Mine Action activities across the Globe.
+                        IIFOMAS is an initiative of the Horizon Safer World Foundation (HSWF) and is driven by a team of
+                        dedicated Promoters with over two decades of experience in every aspect of Mine Action.
+                    </p>
+
+                    <!-- Vision & Mission -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6 d-flex align-items-start">
+                            <div class="icon text-primary fs-2 me-3">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Our Vision</h5>
+                                <p class="mb-0">A world where communities are empowered to rebuild and thrive in safe
+                                    environments, free from the threat of landmines and explosive hazards, through
+                                    collaborative and sustainable Mine Action efforts.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-start">
+                            <div class="icon text-primary fs-2 me-3">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold">Our Mission</h5>
+                                <p class="mb-0">To drive a unified global effort in Mine Action by advancing innovative
+                                    solutions to mitigate explosive hazards and empowering communities to rebuild and
+                                    thrive in safe, resilient environments worldwide through strategic alliances,
+                                    pioneering research, and progressive policy development</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Us Button -->
+                    <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="contact.php">Contact Us</a>
                 </div>
             </div>
         </div>
-        <!-- Banner End -->
+    </div>
 
 
-        <!-- About Start -->
-        <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="row g-5 align-items-center">
-                    <div class="col-lg-5 wow fadeInLeft" data-wow-delay="0.1s">
-                        <div class="border bg-secondary rounded">
-                            <img src="img/about-2.png" class="img-fluid w-100 rounded" alt="Image">
-                        </div>
-                    </div>
-                    <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
-                        <h4 class="text-secondary sub-title fw-bold">about The Dance School</h4>
-                        <h1 class="display-3 mb-4"><strong class="text-primary">JustDance</strong>, We have been teaching dance since 2001</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint commodi alias, eius incidunt similique exercitationem magni quod recusandae maiores ducimus non porro neque odio explicabo, doloribus deleniti rem sequi adipisci sed ab qui dolorem. Optio sint eius illum consequuntur. Odit.
-                        </p>
-                        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore illum nemo deserunt reiciendis perferendis incidunt ullam expedita dolor, voluptas repellat necessitatibus dolore repellendus dolorum, voluptate dolorem. Debitis quis ipsa ullam neque corrupti maxime ad magni, tempore, aperiam rerum, perspiciatis fuga.
-                        </p>
-                        <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Learn More</a>
+       <!-- Team Start -->
+    <div class="container-fluid team bg-light py-5">
+        <div class="container py-5">
+            <div class="pb-5">
+                <div class="row g-4 align-items-end">
+                    <div class="col-xl-8">
+                        <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">
+                            Our Leadership and People
+                        </h4>
+                        <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">
+                            We hear over and over again that it feels different to work with us.
+                        </h1>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- About End -->
 
+            <!-- Owl Carousel -->
+            <div class="team-carousel owl-carousel wow fadeInUp" data-wow-delay="0.5s">
 
-        <!-- Counter Facts Start -->
-        <div class="container-fluid counter-facts py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="counter">
-                            <div class="counter-icon w-100 d-flex align-items-center justify-content-center">
-                                <h3>Dance Classes</h3>
-                            </div>
-                            <div class="counter-content d-flex align-items-center justify-content-center mt-4">
-                                <span class="counter-value" data-toggle="counter-up">158</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="counter">
-                            <div class="counter-icon w-100 d-flex align-items-center justify-content-center">
-                                <h3>Best Instructor</h3>
-                            </div>
-                            <div class="counter-content d-flex align-items-center justify-content-center mt-4">
-                                <span class="counter-value" data-toggle="counter-up">49</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="counter">
-                            <div class="counter-icon w-100 d-flex align-items-center justify-content-center">
-                                <h3>Total Brunch</h3>
-                            </div>
-                            <div class="counter-content d-flex align-items-center justify-content-center mt-4">
-                                <span class="counter-value" data-toggle="counter-up">17</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-6 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="counter">
-                            <div class="counter-icon w-100 d-flex align-items-center justify-content-center">
-                                <h3>Happy customer</h3>
-                            </div>
-                            <div class="counter-content d-flex align-items-center justify-content-center mt-4">
-                                <span class="counter-value" data-toggle="counter-up">567</span>
-                                <h4 class="text-secondary mb-0" style="font-weight: 600; font-size: 25px;">+</h4>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Person 1 -->
+                <div class="team-card bg-white rounded shadow p-4 text-center">
+                    <img src="img/team-1.jpg" class="img-fluid rounded mb-3" alt="Person 1" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">John Doe <span class="text-muted">— CEO</span></h5>
+                    <p class="small text-justify mb-0">
+                        Maj Gen Ajay Seth, VSM (Retd) was commissioned in Garhwal Rifles Regiment of Indian Army in
+                        December 1982. He has served in Op Blue Star and has done number of challenging tenures in
+                        Counter Insurgency including commanding an Infantry Battalion and Rashtriya Rifles Sector. As
+                        Additional Director General International Cooperation, he steered Defense Cooperation with Armed
+                        Forces of foreign countries. Post superannuation he has been delivering talks and writing
+                        articles.
+                    </p>
                 </div>
+
+                <!-- Person 2 -->
+                <div class="team-card bg-white rounded shadow p-4 text-center">
+                    <img src="img/team-2.jpg" class="img-fluid rounded mb-3" alt="Person 2" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">Jane Smith <span class="text-muted">— Director</span></h5>
+                    <p class="small text-justify mb-0">
+                        With a master’s degree in human resources & management, Mr. Nadeem Saleem has rich professional
+                        experience of 18 years. During these years, he has worked and helped companies recruit for short
+                        and long-term projects. Mr. Nadeem has recruited an overall manpower of around 12000 people
+                        across the world, including India, Nepal, Bangladesh, Sri Lanka, USA, Canada, Tunisia, Cambodia,
+                        Pakistan, Saudi, Egypt, Singapore, Malaysia, Serra Leon, Mozambique, Zimbabwe, and South Africa.
+                        He is Director HR, Admin and Logistics in Horizon.
+                    </p>
+                </div>
+
+                <!-- Person 3 -->
+                <div class="team-card bg-white rounded shadow p-4 text-center">
+                    <img src="img/team-3.jpg" class="img-fluid rounded mb-3" alt="Person 3" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">Michael Lee <span class="text-muted">— Research Head</span></h5>
+                    <p class="small text-justify mb-0">
+                        Ms. Eishna Mittal Coetzee is a seasoned finance professional with a diverse background in
+                        logistics, humanitarian aid, and sustainable energy. She has held key leadership roles in
+                        various organizations and is currently the Director of Finance and Business Development at
+                        Horizon. With a strong commitment to social impact, she is also involved in philanthropic
+                        initiatives and is the founder of Human Library Pune.
+                    </p>
+                </div>
+
+                <!-- Person 4 -->
+                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
+                    <img src="img/team-4.jpg" class="img-fluid rounded mb-3" alt="Person 4" object-fit:cover;
+                        margin:auto;">
+                    <h5 class="fw-bold mb-1">Sophia Brown <span class="text-muted">— Program Manager</span></h5>
+                    <p class="small text-justify mb-0">
+                        Colonel Navneet MP Mittal, is the Director General and Founder of IIFOMAS. A retired Indian Army
+                        officer with over 42 years of experience in combat, corporate, and NGO sectors, he pioneered
+                        humanitarian demining in India, founding Horizon as the country’s first organization for
+                        post-conflict environment management by Indian ex-servicemen in 2001. Col. Mittal, an alumnus of
+                        the National Defence Academy, was commissioned into 54 Engineer Regiment. He has been recognized
+                        for his distinguished service and has held several key roles, including as Chief Humanitarian
+                        Officer with the United Nations. He has led numerous international mine clearance projects and
+                        is Chairman & Co-Founder, Horizon Group.
+                    </p>
+                </div>
+
             </div>
         </div>
-        <!-- Counter Facts End -->
+    </div>
+    <!-- Team End -->
 
-
-        <!-- Team Start -->
-        <div class="container-fluid team py-5">
-            <div class="container py-5">
-                <div class="pb-5">
-                    <h4 class="text-secondary sub-title fw-bold wow fadeInUp" data-wow-delay="0.1s">Dance Teachers</h4>
-                    <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">Our Professional Instructor</h1>
-                </div>
-                <div class="team-carousel owl-carousel pt-5 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.1s">
-                        <div class="team-img bg-secondary rounded-top">
-                            <img src="img/team-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            <div class="team-icon">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center p-4">
-                            <a href="#" class="h4">Emily Ava</a>
-                            <p class="mb-0 text-primary">Instructor</p>
-                        </div>
-                    </div>
-                    <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.3s">
-                        <div class="team-img bg-secondary rounded-top">
-                            <img src="img/team-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            <div class="team-icon">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center p-4">
-                            <a href="#" class="h4">Emily Ava</a>
-                            <p class="mb-0 text-primary">Instructor</p>
-                        </div>
-                    </div>
-                    <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.5s">
-                        <div class="team-img bg-secondary rounded-top">
-                            <img src="img/team-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            <div class="team-icon">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center p-4">
-                            <a href="#" class="h4">Emily Ava</a>
-                            <p class="mb-0 text-primary">Instructor</p>
-                        </div>
-                    </div>
-                    <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="team-img bg-secondary rounded-top">
-                            <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            <div class="team-icon">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center p-4">
-                            <a href="#" class="h4">Emily Ava</a>
-                            <p class="mb-0 text-primary">Instructor</p>
-                        </div>
-                    </div>
-                    <div class="team-item border rounded wow fadeInUp" data-wow-delay="0.9s">
-                        <div class="team-img bg-secondary rounded-top">
-                            <img src="img/team-4.jpg" class="img-fluid rounded-top w-100" alt="Image">
-                            <div class="team-icon">
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-square btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                        <div class="team-content text-center p-4">
-                            <a href="#" class="h4">Emily Ava</a>
-                            <p class="mb-0 text-primary">Instructor</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Team End -->
 
 
         <!-- Footer Start -->
@@ -410,6 +451,43 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+      <script>
+        $(document).ready(function () {
+            var $c = $('.team-carousel');
+            // If already initialized by some other script, destroy it first
+            if ($c.hasClass('owl-loaded')) {
+                $c.trigger('destroy.owl.carousel');
+                // unwrap Owl's structure so re-init works cleanly
+                $c.removeClass('owl-loaded owl-hidden');
+                $c.find('.owl-stage-outer').children().unwrap();
+            }
+
+            // Re-init with your settings
+            $c.owlCarousel({
+                items: 4,                 // desktop fallback
+                loop: true,
+                margin: 30,
+                nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoWidth: false,         // make sure width is controlled by "items"
+                responsiveRefreshRate: 50,
+                navText: [
+                    '<i class="fa fa-chevron-left"></i>',
+                    '<i class="fa fa-chevron-right"></i>'
+                ],
+                responsive: {
+                    0: { items: 1 },
+                    576: { items: 2 },
+                    768: { items: 2 },
+                    992: { items: 2 },
+                    1200: { items: 2 }       // cap at 4 even on very wide screens
+                }
+            });
+        });
+    </script>
     </body>
 
 </html>
