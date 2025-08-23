@@ -1304,20 +1304,36 @@
     <!-- Initialize Carousel -->
     <script>
         $(document).ready(function () {
-            $('.team-carousel').owlCarousel({
+            var $c = $('.team-carousel');
+            // If already initialized by some other script, destroy it first
+            if ($c.hasClass('owl-loaded')) {
+                $c.trigger('destroy.owl.carousel');
+                // unwrap Owl's structure so re-init works cleanly
+                $c.removeClass('owl-loaded owl-hidden');
+                $c.find('.owl-stage-outer').children().unwrap();
+            }
+
+            // Re-init with your settings
+            $c.owlCarousel({
+                items: 4,                 // desktop fallback
                 loop: true,
                 margin: 30,
-                autoplay: true,
-                autoplayTimeout: 4000,
-                dots: false,
                 nav: true,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoWidth: false,         // make sure width is controlled by "items"
+                responsiveRefreshRate: 50,
                 navText: [
-                    '<i class="fas fa-chevron-left"></i>',
-                    '<i class="fas fa-chevron-right"></i>'
+                    '<i class="fa fa-chevron-left"></i>',
+                    '<i class="fa fa-chevron-right"></i>'
                 ],
                 responsive: {
                     0: { items: 1 },
-                    768: { items: 2 }
+                    576: { items: 2 },
+                    768: { items: 2 },
+                    992: { items: 2 },
+                    1200: { items: 2 }       // cap at 4 even on very wide screens
                 }
             });
         });
@@ -1347,10 +1363,10 @@
                 autoplayTimeout: 5000,
                 autoWidth: false,         // make sure width is controlled by "items"
                 responsiveRefreshRate: 50,
-                 navText: [
-    '<i class="fa fa-chevron-left"></i>',
-    '<i class="fa fa-chevron-right"></i>'
-  ],
+                navText: [
+                    '<i class="fa fa-chevron-left"></i>',
+                    '<i class="fa fa-chevron-right"></i>'
+                ],
                 responsive: {
                     0: { items: 1 },
                     576: { items: 2 },
