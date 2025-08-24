@@ -106,6 +106,22 @@
             color: #fff !important;
         }
 
+        /* Override Bootstrap primary button color */
+        .btn-register {
+            background: #d41919 !important;
+            /* blue gradient */
+            border: none !important;
+            color: #fff !important;
+            /* ensure text stays white */
+        }
+
+        /* Hover effect with a darker blue gradient */
+        .btn-register:hover {
+            background: #7B241C !important;
+            border: none !important;
+            color: #fff !important;
+        }
+
         .text-secondary {
             color: #d41919 !important;
         }
@@ -133,6 +149,53 @@
             font-size: 3rem !important;
             /* adjust as needed */
             line-height: 1.2;
+        }
+
+
+        .back-to-top {
+            display: none;
+            /* hidden at page load */
+            position: fixed;
+            /* stays in bottom-right corner */
+            right: 20px;
+            bottom: 20px;
+            z-index: 999;
+        }
+
+        .blog-img {
+            height: 250px;
+            /* fixed height for all blog images */
+            overflow: hidden;
+            /* crop overflow */
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* make sure the image covers the box */
+        }
+
+        .rounded-bottom {
+            height: 300px;
+        }
+
+        .rounded-bottom-training {
+            height: 250px;
+        }
+
+        .footer-item .d-flex .btn-lg-square {
+            flex-shrink: 0;
+            /* prevent button from shrinking */
+            display: flex;
+            /* center the icon */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-item .d-flex {
+            align-items: flex-start;
+            /* align icon to the top when text is multiline */
         }
     </style>
     <!-- CSS for smooth rotation -->
@@ -177,6 +240,8 @@
             max-width: 98%;
             margin: auto;
             padding: 0px;
+            height: 870px;
+            margin-bottom: 20px;
         }
 
         .team-card h5 {
@@ -197,6 +262,17 @@
             margin: auto;
             border-radius: 16px;
             /* adjust roundness */
+        }
+
+        .footer-item .row.g-2 img {
+            width: 100%;
+            /* always full width of its col */
+            height: 80px;
+            /* fixed height */
+            object-fit: cover;
+            /* crop instead of stretching */
+            border-radius: 8px;
+            /* keep rounded corners */
         }
     </style>
     <!-- JS for Plus/Minus Toggle -->
@@ -251,7 +327,7 @@
     <style>
         .training-carousel .owl-nav .owl-prev,
         .training-carousel .owl-nav .owl-next {
-            background: #d41919 !important;
+            display: none !important;
         }
 
         /* icons */
@@ -263,19 +339,18 @@
         /* hover effect */
         .training-carousel .owl-nav .owl-prev:hover,
         .training-carousel .owl-nav .owl-next:hover {
-            background: #b91515 !important;
+            display: none !important;
         }
 
         .team-carousel {
             width: 100%;
-            height: auto;
-            background: #f8f9fa;
+            height: 100%;
             padding-top: 30px;
             padding-bottom: 10px;
         }
 
         /* nav container above */
-        .team-carousel .owl-nav {            
+        .team-carousel .owl-nav {
             top: -50px;
             /* adjust vertical position */
             width: 100%;
@@ -300,7 +375,75 @@
         .team-carousel .owl-nav .owl-next:hover {
             background: #b91515 !important;
         }
+
+        @media (max-width: 576px) {
+            .team-carousel .team-card {
+                padding: 15px;
+                /* less padding */
+                font-size: 14px;
+                height: auto;
+                /* smaller text */
+            }
+
+            .team-carousel .team-card img {
+                width: 80%;
+                /* smaller images */
+                height: auto;
+                margin: 0 auto 15px auto;
+                object-fit: cover;
+                /* crop without stretching */
+            }
+
+            .team-carousel .team-card h5 {
+                font-size: 16px;
+            }
+
+            .team-carousel .team-card p {
+                font-size: 13px;
+            }
+        }
     </style>
+
+    <script>
+        document.addEventListener("scroll", function () {
+            const backToTop = document.querySelector(".back-to-top");
+            if (window.scrollY > 200) {   // show after scrolling 200px
+                backToTop.style.display = "flex";  // flex centers icon inside button
+            } else {
+                backToTop.style.display = "none";
+            }
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modalImage = document.getElementById("modalImage");
+            const galleryLinks = Array.from(document.querySelectorAll('[data-bs-target="#imageModal"]'));
+            let currentIndex = 0;
+
+            // Show clicked image in modal
+            galleryLinks.forEach((link, index) => {
+                link.addEventListener("click", function () {
+                    const imgSrc = this.querySelector("img").getAttribute("src");
+                    modalImage.setAttribute("src", imgSrc);
+                    currentIndex = index; // remember which image is open
+                });
+            });
+
+            // Next Button
+            document.getElementById("nextBtn").addEventListener("click", function (e) {
+                e.preventDefault();
+                currentIndex = (currentIndex + 1) % galleryLinks.length;
+                modalImage.setAttribute("src", galleryLinks[currentIndex].querySelector("img").getAttribute("src"));
+            });
+
+            // Prev Button
+            document.getElementById("prevBtn").addEventListener("click", function (e) {
+                e.preventDefault();
+                currentIndex = (currentIndex - 1 + galleryLinks.length) % galleryLinks.length;
+                modalImage.setAttribute("src", galleryLinks[currentIndex].querySelector("img").getAttribute("src"));
+            });
+        });
+    </script>
 
 </head>
 
@@ -401,9 +544,10 @@
                 </div>
 
                 <!-- Register Button -->
-            <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-lg-4">Register Now</a>
+                <a href="register.html" class="btn btn-register rounded-pill text-white py-2 px-4 ms-lg-4">Register
+                    Now</a>
 
-                
+
 
             </div>
         </nav>
@@ -531,7 +675,7 @@
                 <div class="col-lg-7 wow fadeInRight" data-wow-delay="0.3s">
                     <h4 class="text-secondary sub-title fw-bold">ABOUT IIFOMAS</h4>
                     <h1 class="display-3 mb-4">
-                        <strong class="text-primary">IIFOMAS</strong> (India International Forum on Mine Action and
+                        <strong style="color: #d41919;">IIFOMAS</strong> (India International Forum on Mine Action and
                         Safety)
                     </h1>
                     <p>
@@ -550,8 +694,8 @@
                     <!-- Vision & Mission -->
                     <div class="row g-4 mb-4">
                         <div class="col-md-6 d-flex align-items-start">
-                            <div class="icon text-primary fs-2 me-3">
-                                <i class="fas fa-eye"></i>
+                            <div class="icon fs-2 me-3">
+                                <i class="fas fa-eye" style="color:#d41919;"></i>
                             </div>
                             <div>
                                 <h5 class="fw-bold">Our Vision</h5>
@@ -561,8 +705,8 @@
                             </div>
                         </div>
                         <div class="col-md-6 d-flex align-items-start">
-                            <div class="icon text-primary fs-2 me-3">
-                                <i class="fas fa-bullseye"></i>
+                            <div class="icon fs-2 me-3">
+                                <i class="fas fa-bullseye" style="color:#d41919;"></i>
                             </div>
                             <div>
                                 <h5 class="fw-bold">Our Mission</h5>
@@ -609,7 +753,7 @@
                             <i class="fa-solid fa-microphone-lines fa-3x text-white m-0 p-0"></i>
                         </div>
                     </div>
-                    <div class="rounded-bottom border border-top-0 p-4 text-left">
+                    <div class="rounded-bottom-training border border-top-0 p-4 text-left">
                         <a href="#" class="h4 mb-3 d-block">Annual Symposiums & Conferences</a>
                         <p class="mb-3">IIFOMAS takes pride in organizing world-class annual symposiums and conferences
                             focused on addressing global challenges related to Mine Action and Safety.</p>
@@ -626,7 +770,7 @@
                             <i class="fa-solid fa-chart-line fa-3x text-white m-0 p-0"></i>
                         </div>
                     </div>
-                    <div class="rounded-bottom border border-top-0 p-4">
+                    <div class="rounded-bottom-training border border-top-0 p-4">
                         <a href="#" class="h4 mb-3 d-block">Research & Policy Development</a>
                         <p class="mb-3">Provide cutting-edge research on mine action, safety measures, and post-conflict
                             recovery.</p>
@@ -641,7 +785,7 @@
                             <i class="fa-solid fa-newspaper fa-3x text-white m-0 p-0"></i>
                         </div>
                     </div>
-                    <div class="rounded-bottom border border-top-0 p-4">
+                    <div class="rounded-bottom-training border border-top-0 p-4">
                         <a href="#" class="h4 mb-3 d-block">Newsletters & Publications</a>
                         <p class="mb-3">Release monthly newsletters, reports, and magazines on global mine action
                             updates and developments.</p>
@@ -657,7 +801,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-bottom border border-top-0 p-4">
+                    <div class="rounded-bottom-training border border-top-0 p-4">
                         <a href="#" class="h4 mb-3 d-block">Humanitarian Demining Operations</a>
                         <p class="mb-3">Support demining operations globally in collaboration with governments and
                             international partners.</p>
@@ -673,7 +817,7 @@
                         </div>
                     </div>
 
-                    <div class="rounded-bottom border border-top-0 p-4">
+                    <div class="rounded-bottom-training border border-top-0 p-4">
                         <a href="#" class="h4 mb-3 d-block">Capacity Building & Training</a>
                         <p class="mb-3">Provide expert training to deminers, security forces, and communities to enhance
                             mine risk education.</p>
@@ -688,7 +832,7 @@
                             <i class="fa-solid fa-map-location-dot fa-3x text-white m-0 p-0"></i>
                         </div>
                     </div>
-                    <div class="rounded-bottom border border-top-0 p-4">
+                    <div class="rounded-bottom-training border border-top-0 p-4">
                         <a href="#" class="h4 mb-3 d-block">Mine Action Data & Mapping</a>
                         <p class="mb-3">Offer data collection, analysis, and mapping services for landmine contamination
                             and clearance progress.</p>
@@ -775,24 +919,24 @@
                         logistics, humanitarian aid, and sustainable energy. She has held key leadership roles in
                         various organizations and is currently the Director of Finance and Business Development at
                         Horizon. With a strong commitment to social impact, she is also involved in philanthropic
+                        initiatives and is the founder of Human Library Pune.nizations and is currently the Director of
+                        Finance and Business Development at
+                        Horizon. With a strong commitment to social impact, she is also involved in philanthropic
                         initiatives and is the founder of Human Library Pune.
                     </p>
                 </div>
 
                 <!-- Person 4 -->
-                <div class="team-card bg-white rounded shadow-sm p-4 text-center">
-                    <img src="img/img-3.jpg" class="img-fluid rounded mb-3" alt="Person 4" object-fit:cover;
+                <div class="team-card bg-white rounded shadow p-4 text-center">
+                    <img src="img/img-3.jpg" class="img-fluid rounded mb-3" alt="Person 3" object-fit:cover;
                         margin:auto;">
-                    <h5 class="fw-bold mb-1">Sophia Brown <span class="text-muted">— Program Manager</span></h5>
+                    <h5 class="fw-bold mb-1">Michael Lee <span class="text-muted">— Research Head</span></h5>
                     <p class="small text-justify mb-0">
-                        Colonel Navneet MP Mittal, is the Director General and Founder of IIFOMAS. A retired Indian Army
-                        officer with over 42 years of experience in combat, corporate, and NGO sectors, he pioneered
-                        humanitarian demining in India, founding Horizon as the country’s first organization for
-                        post-conflict environment management by Indian ex-servicemen in 2001. Col. Mittal, an alumnus of
-                        the National Defence Academy, was commissioned into 54 Engineer Regiment. He has been recognized
-                        for his distinguished service and has held several key roles, including as Chief Humanitarian
-                        Officer with the United Nations. He has led numerous international mine clearance projects and
-                        is Chairman & Co-Founder, Horizon Group.
+                        Ms. Eishna Mittal Coetzee is a seasoned finance professional with a diverse background in
+                        logistics, humanitarian aid, and sustainable energy. She has held key leadership roles in
+                        various organizations and is currently the Director of Finance and Business Development at
+                        Horizon. With a strong commitment to social impact, she is also involved in philanthropic
+                        initiatives and is the founder of Human Library Pune.
                     </p>
                 </div>
 
@@ -815,7 +959,7 @@
                             Learn More According To Your Needs
                         </h4>
                         <h1 class="display-2 mb-0 wow fadeInUp" data-wow-delay="0.3s">
-                            <strong class="text-primary">FAQ</strong> – Clear Your Doubts
+                            <strong style="color: #d41919;">FAQ</strong> – Clear Your Doubts
                         </h1>
                     </div>
                 </div>
@@ -1035,11 +1179,11 @@
 
                 <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.1s">
                     <div class="blog-img rounded-top">
-                        <img src="img/class-1.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                        <img src="img/blog1.jpg" class="img-fluid rounded-top w-100" alt="Image">
                     </div>
                     <div class="bg-light rounded-bottom p-4">
                         <div class="d-flex justify-content-between mb-4">
-                            <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-primary"></i> 1128 August
+                            <a href="#" class="text-muted"><i class="fa fa-calendar-alt text-primary"></i> 28 August
                                 2021</a>
                         </div>
                         <a href="#" class="h4 mb-3 d-block">Enhanced Role of India in the Global Mine Action</a>
@@ -1049,7 +1193,7 @@
                 </div>
                 <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.3s">
                     <div class="blog-img rounded-top">
-                        <img src="img/class-2.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                        <img src="img/blog2.jpg" class="img-fluid rounded-top w-100" alt="Image">
                     </div>
                     <div class="bg-light rounded-bottom p-4">
                         <div class="d-flex justify-content-between mb-4">
@@ -1063,7 +1207,7 @@
                 </div>
                 <div class="blog-item bg-white rounded wow fadeInUp" data-wow-delay="0.5s">
                     <div class="blog-img rounded-top">
-                        <img src="img/class-3.jpg" class="img-fluid rounded-top w-100" alt="Image">
+                        <img src="img/blog3.png" class="img-fluid rounded-top w-100" alt="Image">
                     </div>
                     <div class="bg-light rounded-bottom p-4">
                         <div class="d-flex justify-content-between mb-4">
@@ -1223,30 +1367,74 @@
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
                         <h4 class="text-white mb-4">Quick Links</h4>
-                        <a href="#" class="footer-link"> About Us</a>
-                        <a href="#" class="footer-link"> Classes</a>
-                        <a href="#" class="footer-link"> Privacy Policy</a>
-                        <a href="#" class="footer-link"> Terms & Conditions</a>
-                        <a href="#" class="footer-link"> Schedule</a>
-                        <a href="#" class="footer-link"> FAQ</a>
-                        <a href="#" class="footer-link"> Contact Us</a>
+                        <a href="#" class="footer-link"> Home</a>
+                        <a href="#" class="footer-link"> About</a>
+                        <a href="#" class="footer-link"> Events</a>
+                        <a href="#" class="footer-link"> Offerings</a>
+                        <a href="#" class="footer-link"> Articles</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
                     <div class="footer-item d-flex flex-column">
-                        <div class="footer-item">
-                            <h4 class="text-white mb-4">Newsletter</h4>
-                            <p class="text-white mb-3">Dolor amet sit justo amet elitr clita ipsum elitr est.Lorem ipsum
-                                dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit.</p>
-                            <div class="position-relative mx-auto rounded-pill">
-                                <input class="form-control rounded-pill w-100 py-3 ps-4 pe-5" type="text"
-                                    placeholder="Enter your email">
-                                <button type="button"
-                                    class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 mt-2 me-2">SignUp</button>
+                        <h4 class="text-white mb-4">Gallery</h4>
+                        <div class="row g-2">
+                            <div class="col-4">
+                                <a href="img/blog1.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    <img src="img/blog1.jpg" class="img-fluid rounded" alt="Gallery 1">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="img/blog2.jpg" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    <img src="img/blog2.jpg" class="img-fluid rounded" alt="Gallery 2">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="img/blog3.png" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    <img src="img/blog3.png" class="img-fluid rounded" alt="Gallery 3">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="img/blog5.png" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    <img src="img/blog5.png" class="img-fluid rounded" alt="Gallery 4">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="img/blog6.png" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    <img src="img/blog6.png" class="img-fluid rounded" alt="Gallery 5">
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <a href="img/blog-summary3.png" data-bs-toggle="modal" data-bs-target="#imageModal">
+                                    <img src="img/blog-summary3.png" class="img-fluid rounded" alt="Gallery 6">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Image Modal with Next/Prev -->
+                <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content bg-dark">
+                            <div class="modal-body text-center position-relative">
+                                <img id="modalImage" src="" class="img-fluid rounded" alt="Preview">
+
+                                <!-- Prev Button -->
+                                <a class="position-absolute top-50 start-0 translate-middle-y text-white fs-2 px-3"
+                                    href="#" id="prevBtn" style="text-decoration:none;">
+                                    &#10094;
+                                </a>
+
+                                <!-- Next Button -->
+                                <a class="position-absolute top-50 end-0 translate-middle-y text-white fs-2 px-3"
+                                    href="#" id="nextBtn" style="text-decoration:none;">
+                                    &#10095;
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -1275,8 +1463,9 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
-
+    <a href="#" class="btn btn-lg-square btn-danger back-to-top">
+        <i class="fa fa-arrow-up"></i>
+    </a>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
@@ -1434,10 +1623,6 @@
                 autoplayTimeout: 5000,
                 autoWidth: false,         // make sure width is controlled by "items"
                 responsiveRefreshRate: 50,
-                navText: [
-                    '<i class="fa fa-chevron-left"></i>',
-                    '<i class="fa fa-chevron-right"></i>'
-                ],
                 responsive: {
                     0: { items: 1 },
                     576: { items: 2 },

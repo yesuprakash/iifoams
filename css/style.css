@@ -261,7 +261,7 @@
     
     .sticky-top.navbar-light {
         position: fixed;
-        background: var(--bs-light) !important;
+       
     }
     .navbar-light .navbar-nav .nav-link.nav-contact::before {
         display: none;
