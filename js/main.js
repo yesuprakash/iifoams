@@ -1,3 +1,4 @@
+   
 (function ($) {
     "use strict";
 
@@ -26,6 +27,7 @@
     });
 
     // Hero Header carousel
+    $(document).ready(function(){
     $(".header-carousel").owlCarousel({
         animateOut: 'slideOutDown',
         items: 1,
@@ -38,6 +40,7 @@
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
+    });
     });
 
 

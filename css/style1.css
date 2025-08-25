@@ -1,0 +1,308 @@
+
+        .owl-carousel .owl-item .owl-carousel-item img {
+            transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
+            transform: scale(1.1);
+            opacity: 0;
+        }
+
+        .owl-carousel .owl-item.active .owl-carousel-item img {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* Smooth fade/zoom for the background image of the active slide */
+        .header-carousel .owl-item .header-carousel-item img {
+            transform: scale(1.08);
+            opacity: 0;
+            transition: transform 1.2s ease, opacity 1.2s ease;
+            will-change: transform, opacity;
+        }
+
+        .header-carousel .owl-item.active .header-carousel-item img {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        /* Optional: ensure caption is left and vertically centered nicely */
+        .header-carousel .carousel-caption {
+            left: 0;
+            right: auto;
+            bottom: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .header-carousel .owl-prev,
+        .header-carousel .owl-next {
+            background-color: #d41919 !important;
+            border-radius: 50%;
+            /* optional: make them round */
+            width: 50px;
+            /* adjust size */
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Change arrow icons color (if they're using ::before content) */
+        .header-carousel .owl-prev span,
+        .header-carousel .owl-next span {
+            color: #fff !important;
+            /* white arrow inside */
+            font-size: 24px;
+            /* make arrow bigger */
+        }
+
+        /* Override Bootstrap primary button color */
+        .btn-primary {
+            background: linear-gradient(90deg, #2f6ae9, #4f339b) !important;
+            /* blue gradient */
+            border: none !important;
+            color: #fff !important;
+            /* ensure text stays white */
+        }
+
+        /* Hover effect with a darker blue gradient */
+        .btn-primary:hover {
+            background: linear-gradient(90deg, #0056b3, #0096d6) !important;
+            border: none !important;
+            color: #fff !important;
+        }
+
+        /* Override Bootstrap primary button color */
+        .btn-register {
+            background: #d41919 !important;
+            /* blue gradient */
+            border: none !important;
+            color: #fff !important;
+            /* ensure text stays white */
+        }
+
+        /* Hover effect with a darker blue gradient */
+        .btn-register:hover {
+            background: #7B241C !important;
+            border: none !important;
+            color: #fff !important;
+        }
+
+        .text-secondary {
+            color: #d41919 !important;
+        }
+
+        h1.display-3 {
+            font-size: 2.5rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+        }
+
+        .display-2 {
+            font-size: 2.5rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+            /* optional for better spacing */
+        }
+
+        .display-4 {
+            font-size: 2rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+        }
+
+        .display-1 {
+            font-size: 3rem !important;
+            /* adjust as needed */
+            line-height: 1.2;
+        }
+
+
+
+        .blog-img {
+            height: 250px;
+            /* fixed height for all blog images */
+            overflow: hidden;
+            /* crop overflow */
+        }
+
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* make sure the image covers the box */
+        }
+
+        .rounded-bottom {
+            height: 300px;
+        }
+
+        .rounded-bottom-training {
+            height: 250px;
+        }
+
+        .footer-item .d-flex .btn-lg-square {
+            flex-shrink: 0;
+            /* prevent button from shrinking */
+            display: flex;
+            /* center the icon */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-item .d-flex {
+            align-items: flex-start;
+            /* align icon to the top when text is multiline */
+        }
+
+         .rotate-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-button:not(.collapsed) .rotate-icon {
+            transform: rotate(45deg);
+        }
+
+         /* Fixed square portraits on left */
+        .rounded-square {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Bigger square portrait on right */
+        .big-square {
+            width: 500px;
+            /* increased from 320px */
+            height: 500px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .w-20 {
+            width: 20%;
+        }
+
+        .w-80 {
+            width: 80%;
+        }
+
+        .team-card {
+            max-width: 98%;
+            margin: auto;
+            padding: 0px;
+            height: 670px;
+            margin-bottom: 20px;
+        }
+
+        .team-card h5 {
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .team-card p {
+            text-align: justify;
+            font-size: 15px;
+            font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .team-card img {
+            width: 250px;
+            /* increase/decrease as you like */
+            height: 250px;
+            object-fit: cover;
+            margin: auto;
+            border-radius: 16px;
+            /* adjust roundness */
+        }
+
+        .footer-item .row.g-2 img {
+            width: 100%;
+            /* always full width of its col */
+            height: 80px;
+            /* fixed height */
+            object-fit: cover;
+            /* crop instead of stretching */
+            border-radius: 8px;
+            /* keep rounded corners */
+        }
+
+          .training-carousel .owl-nav .owl-prev,
+        .training-carousel .owl-nav .owl-next {
+            display: none !important;
+        }
+
+        /* icons */
+        .training-carousel .owl-nav i {
+            color: #fff !important;
+            font-size: 16px;
+        }
+
+        /* hover effect */
+        .training-carousel .owl-nav .owl-prev:hover,
+        .training-carousel .owl-nav .owl-next:hover {
+            display: none !important;
+        }
+
+        .team-carousel {
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;
+            padding-bottom: 10px;
+        }
+
+        /* nav container above */
+        .team-carousel .owl-nav {
+            top: -50px;
+            /* adjust vertical position */
+            width: 100%;
+        }
+
+        /* arrow buttons */
+        .team-carousel .owl-nav .owl-prev,
+        .team-carousel .owl-nav .owl-next {
+
+
+            background: #d41919 !important;
+            cursor: pointer;
+        }
+
+        /* icons */
+        .team-carousel .owl-nav i {
+            color: #fff !important;
+        }
+
+        /* hover */
+        .team-carousel .owl-nav .owl-prev:hover,
+        .team-carousel .owl-nav .owl-next:hover {
+            background: #b91515 !important;
+        }
+
+        @media (max-width: 576px) {
+            .team-carousel .team-card {
+                padding: 15px;
+                /* less padding */
+                font-size: 14px;
+                height: auto;
+                /* smaller text */
+            }
+
+            .team-carousel .team-card img {
+                width: 80%;
+                /* smaller images */
+                height: auto;
+                margin: 0 auto 15px auto;
+                object-fit: cover;
+                /* crop without stretching */
+            }
+
+            .team-carousel .team-card h5 {
+                font-size: 16px;
+            }
+
+            .team-carousel .team-card p {
+                font-size: 13px;
+            }
+        }
+        

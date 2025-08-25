@@ -23,7 +23,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
+    <link href="css/style1.css" rel="stylesheet">
     <style>
         .event-card {
             background: #fff;
@@ -66,6 +66,8 @@
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
     </style>
+
+
 </head>
 
 <body>
@@ -79,32 +81,41 @@
     </div>
     <!-- Spinner End -->
 
-    <!-- header.html -->
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-secondary top-bar px-5 d-none d-lg-block">
         <div class="row gx-0 align-items-center" style="height: 45px;">
 
-            <!-- Left -->
-            <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+            <!-- Left: Announcement -->
+            <div class="col-lg-10 text-center text-lg-start mb-lg-0">
                 <span class="text-light fw-bold">
                     IIFOMAS Symposium 2025 is in the works! Watch this space for date and venue announcements — coming
                     November 2025.
                 </span>
             </div>
 
-            <!-- Right -->
-            <div class="col-lg-4 text-center text-lg-end">
+            <!-- Right: Contact + Social -->
+            <div class="col-lg-2 text-center text-lg-end">
                 <div class="d-flex justify-content-end align-items-center">
+
+
+
+                    <!-- Social Media -->
                     <div class="d-flex">
-                        <div class="border-start py-1"><a href="#" class="btn text-primary"><i
-                                    class="fab fa-facebook-f"></i></a></div>
-                        <div class="border-start py-1"><a href="#" class="btn text-primary"><i
-                                    class="fab fa-twitter"></i></a></div>
-                        <div class="border-start py-1"><a href="#" class="btn text-primary"><i
-                                    class="fab fa-instagram"></i></a></div>
-                        <div class="border-start py-1"><a href="#" class="btn text-primary"><i
-                                    class="fab fa-linkedin-in"></i></a></div>
+                        <div class="border-start py-1">
+                            <a href="#" class="btn text-primary"><i class="fab fa-facebook-f"></i></a>
+                        </div>
+                        <div class="border-start py-1">
+                            <a href="#" class="btn text-primary"><i class="fab fa-twitter"></i></a>
+                        </div>
+                        <div class="border-start py-1">
+                            <a href="#" class="btn text-primary"><i class="fab fa-instagram"></i></a>
+                        </div>
+                        <div class="border-start py-1">
+                            <a href="#" class="btn text-primary"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
                     </div>
+
                 </div>
             </div>
 
@@ -112,40 +123,56 @@
     </div>
     <!-- Topbar End -->
 
-    <!-- Navbar Start -->
+
+    <!-- Navbar & Hero Start -->
     <div class="container-fluid position-relative p-0">
         <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
-            <a href="index.html" class="navbar-brand p-0">
+            <!-- Logo -->
+            <a href="#" class="navbar-brand p-0">
+                <!-- <h1 class="text-primary m-0"><i class="fas fa-biohazard me-3"></i>JustDance</h1> -->
                 <img src="img/iifomas-logo.png" alt="Logo">
             </a>
+
+            <!-- Mobile Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="fa fa-bars"></span>
             </button>
 
+            <!-- Navbar Content -->
             <div class="collapse navbar-collapse" id="navbarCollapse">
+
+                <!-- Contact Info + Social Icons (Right Side) -->
                 <div class="d-flex align-items-center ms-auto me-4">
-                    <a href="#" class="text-dark me-4"><i class="fas fa-map-marker-alt text-primary me-2"></i>Pune,
-                        India</a>
-                    <a href="#" class="text-dark me-4"><i class="fas fa-phone-alt text-primary me-2"></i>+91
-                        8459273764</a>
-                    <a href="mailto:info@iifomas.org" class="text-dark me-4"><i
-                            class="fas fa-envelope text-primary me-2"></i>info@iifomas.org</a>
+                    <a href="#" class="text-dark me-4">
+                        <i class="fas fa-map-marker-alt text-primary me-2"></i>Pune, India
+                    </a>
+                    <a href="#" class="text-dark me-4">
+                        <i class="fas fa-phone-alt text-primary me-2"></i>+91 8459273764
+                    </a>
+                    <a href="mailto:Example@gmail.com" class="text-dark me-4">
+                        <i class="fas fa-envelope text-primary me-2"></i>info@iifomas.org
+                    </a>
                 </div>
 
+                <!-- Navigation Menu -->
                 <div class="navbar-nav py-0">
                     <a href="index.html" class="nav-item nav-link active">Home</a>
                     <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="event.html" class="nav-item nav-link">Events</a>
                     <a href="services.html" class="nav-item nav-link">Offerings</a>
-                    <a href="blog.html" class="nav-item nav-link">Articles</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+                    <a href="blog.html" class="nav-item nav-link">Articles </a>
+                    <a href="#contact" class="nav-item nav-link">Contact Us</a>
                 </div>
 
-                <a href="#" class="btn btn-primary rounded-pill text-white py-2 px-4 ms-lg-4">Register Now</a>
+                <!-- Register Button -->
+                <a href="register.html" class="btn btn-register rounded-pill text-white py-2 px-4 ms-lg-4">Register
+                    Now</a>
             </div>
         </nav>
     </div>
-    <!-- Navbar End -->
+    <!-- Navbar & Hero End -->
+
+
     <!-- Header Start -->
     <div class="container-fluid bg-breadcrumb">
         <div class="container text-center py-5" style="max-width: 900px;">
@@ -160,11 +187,11 @@
 
             <!-- Event 1 -->
             <div class="event-card wow fadeInUp" data-wow-delay="0.1s">
-                <h4 class="text-primary mb-2">IIFOMAS Symposium 14th November 2024</h4>
+                <h4 class="text-secondary">IIFOMAS Symposium 14th November 2024</h4>
                 <div class="event-meta mb-3">
                     <i class="far fa-calendar-alt text-primary me-2"></i>12 Nov 2025 | 10:00 AM – 5:00 PM
                     <br>
-                    <i class="fas fa-map-marker-alt text-primary me-2"></i>Pune, India
+                    <i class="fas fa-map-marker-alt  me-2"></i>Pune, India
                 </div>
                 <h6 class="fw-bold text-secondary">Manekshaw centre, Delhi cant, New Delhi</h6>
                 <p>
@@ -197,7 +224,7 @@
 
             <!-- Event 2 -->
             <div class="event-card wow fadeInUp" data-wow-delay="0.1s">
-                <h4 class="text-primary mb-2">IIFOMAS SYMPOSIUM ON MINE ACTION – PATHWAYS TO A SAFER WORLD</h4>
+                <h4 class="text-secondary">IIFOMAS SYMPOSIUM ON MINE ACTION – PATHWAYS TO A SAFER WORLD</h4>
                 <div class="event-meta mb-3">
                     <i class="far fa-calendar-alt text-primary me-2"></i>12 Nov 2025 | 10:00 AM – 5:00 PM
                     <br>
@@ -235,7 +262,7 @@
 
             <!-- Event 3 -->
             <div class="event-card wow fadeInUp" data-wow-delay="0.1s">
-                <h4 class="text-primary mb-2">After Action Report</h4>
+                <h4 class="text-secondary">After Action Report</h4>
                 <div class="event-meta mb-3">
                     <i class="far fa-calendar-alt text-primary me-2"></i>12 Nov 2025 | 10:00 AM – 5:00 PM
                     <br>
@@ -282,37 +309,55 @@
         <div class="row g-4">
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="gallery-item">
-                    <img src="img/event1.jpeg" class="img-fluid rounded shadow" alt="Gallery Image 1">
+                    <img src="img/event1.jpeg" class="img-fluid rounded shadow gallery-img" alt="Gallery Image 1">
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="gallery-item">
-                    <img src="img/event2.jpeg" class="img-fluid rounded shadow" alt="Gallery Image 2">
+                    <img src="img/event2.jpeg" class="img-fluid rounded shadow gallery-img" alt="Gallery Image 2">
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="gallery-item">
-                    <img src="img/event3.jpeg" class="img-fluid rounded shadow" alt="Gallery Image 3">
+                    <img src="img/event3.jpeg" class="img-fluid rounded shadow gallery-img" alt="Gallery Image 3">
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="gallery-item">
-                    <img src="img/event4.jpeg" class="img-fluid rounded shadow" alt="Gallery Image 4">
+                    <img src="img/event4.jpeg" class="img-fluid rounded shadow gallery-img" alt="Gallery Image 4">
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="gallery-item">
-                    <img src="img/event5.jpeg" class="img-fluid rounded shadow" alt="Gallery Image 4">
+                    <img src="img/event5.jpeg" class="img-fluid rounded shadow gallery-img" alt="Gallery Image 5">
                 </div>
             </div>
             <div class="col-sm-6 col-md-4 col-lg-3">
                 <div class="gallery-item">
-                    <img src="img/event6.jpeg" class="img-fluid rounded shadow" alt="Gallery Image 4">
+                    <img src="img/event6.jpeg" class="img-fluid rounded shadow gallery-img" alt="Gallery Image 6">
                 </div>
             </div>
-            <!-- Add more images as needed -->
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-white position-relative">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-2"
+                    data-bs-dismiss="modal" aria-label="Close"></button>
+                <img src="" class="img-fluid rounded" id="galleryModalImg" alt="">
+                <div class="position-absolute top-50 start-0 translate-middle-y">
+                    <button class="btn gallery-nav" id="prevImg">&#8249;</button>
+                </div>
+                <div class="position-absolute top-50 end-0 translate-middle-y">
+                    <button class="btn gallery-nav" id="nextImg">&#8250;</button>
+                </div>
+                <div class="p-2 text-center" id="galleryCaption"></div>
+            </div>
+        </div>
+    </div>
+
     <!-- Photo Gallery End -->
 
     <!-- Schedule Section Start -->
@@ -334,11 +379,11 @@
             <table class="table table-bordered table-striped align-middle">
                 <thead class="table-dark text-center">
                     <tr>
-                        <th>S. No</th>
-                        <th>Topic</th>
-                        <th>Speaker</th>
-                        <th>Duration</th>
-                        <th>Running Time</th>
+                        <th style="width: 5%;">No</th>
+                        <th style="width: 40%;">Topic</th>
+                        <th style="width: 40%;">Speaker</th>
+                        <th style="width: 5%;">Duration</th>
+                        <th style="width: 10%;">Running Time</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -476,162 +521,153 @@
     <!-- Schedule Section End -->
 
     <div class="container py-5">
-    <!-- Speakers Header -->
-    <div class="row mb-4">
-        <div class="col-12">
-            <h3 class="fw-bold text-dark border-start border-4 border-danger ps-3">
-                SPEAKERS
-            </h3>
+        <!-- Speakers Header -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <h3 class="fw-bold text-dark border-start border-4 border-danger ps-3">
+                    SPEAKERS
+                </h3>
+            </div>
+        </div>
+
+        <!-- Speakers Grid -->
+        <div class="row g-4">
+            <!-- Speaker 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker1.jpg" class="img-fluid "
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Dr. John Smith</h5>
+                        <p class="text-muted mb-0">Director, UN Mine Action</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker2.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Ms. Priya Kapoor</h5>
+                        <p class="text-muted mb-0">Mine Action Specialist, HSWF</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker3.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Mr. Ahmed Khan</h5>
+                        <p class="text-muted mb-0">Chief Engineer, DRDO</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker4.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Dr. John Smith</h5>
+                        <p class="text-muted mb-0">Director, UN Mine Action</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker5.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Ms. Priya Kapoor</h5>
+                        <p class="text-muted mb-0">Mine Action Specialist, HSWF</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker6.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Mr. Ahmed Khan</h5>
+                        <p class="text-muted mb-0">Chief Engineer, DRDO</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Speaker 1 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker7.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Dr. John Smith</h5>
+                        <p class="text-muted mb-0">Director, UN Mine Action</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker8.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Ms. Priya Kapoor</h5>
+                        <p class="text-muted mb-0">Mine Action Specialist, HSWF</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker 3 -->
+            <div class="col-md-4 col-sm-6">
+                <div class="card h-100 shadow-sm border-0 text-center">
+                    <div class="d-flex justify-content-center align-items-center p-3">
+                        <img src="img/speaker9.jpg" class="img-fluid"
+                            style="width: 250px; height: 280px; object-fit: cover; object-position: center;border-radius: 10%;"
+                            alt="Speaker 1">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title mb-1">Mr. Ahmed Khan</h5>
+                        <p class="text-muted mb-0">Chief Engineer, DRDO</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Add more speakers by copying the block above -->
         </div>
     </div>
-
-    <!-- Speakers Grid -->
-    <div class="row g-4">
-        <!-- Speaker 1 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-                <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker1.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Dr. John Smith</h5>
-                    <p class="text-muted mb-0">Director, UN Mine Action</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 2 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-                <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker2.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Ms. Priya Kapoor</h5>
-                    <p class="text-muted mb-0">Mine Action Specialist, HSWF</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 3 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-                <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker3.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Mr. Ahmed Khan</h5>
-                    <p class="text-muted mb-0">Chief Engineer, DRDO</p>
-                </div>
-            </div>
-        </div>
-
-         <!-- Speaker 1 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-               <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker4.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Dr. John Smith</h5>
-                    <p class="text-muted mb-0">Director, UN Mine Action</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 2 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-                <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker5.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Ms. Priya Kapoor</h5>
-                    <p class="text-muted mb-0">Mine Action Specialist, HSWF</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 3 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-              <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker6.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Mr. Ahmed Khan</h5>
-                    <p class="text-muted mb-0">Chief Engineer, DRDO</p>
-                </div>
-            </div>
-        </div>
-         <!-- Speaker 1 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-                <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker7.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Dr. John Smith</h5>
-                    <p class="text-muted mb-0">Director, UN Mine Action</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 2 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-                <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker8.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Ms. Priya Kapoor</h5>
-                    <p class="text-muted mb-0">Mine Action Specialist, HSWF</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Speaker 3 -->
-        <div class="col-md-4 col-sm-6">
-            <div class="card h-100 shadow-sm border-0 text-center">
-                <div class="d-flex justify-content-center align-items-center p-3">
-                    <img src="img/speaker9.jpg" 
-                         class="img-fluid" 
-                         style="width: 250px; height: 280px; object-fit: cover; object-position: center;" 
-                         alt="Speaker 1">
-                </div>
-                <div class="card-body">
-                    <h5 class="card-title mb-1">Mr. Ahmed Khan</h5>
-                    <p class="text-muted mb-0">Chief Engineer, DRDO</p>
-                </div>
-            </div>
-        </div>
-        <!-- Add more speakers by copying the block above -->
-    </div>
-</div>
 
 
     <!-- Reuse Footer from about.html -->
@@ -644,8 +680,39 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>
+        const galleryImgs = document.querySelectorAll('.gallery-img');
+        const modal = new bootstrap.Modal(document.getElementById('galleryModal'));
+        const modalImg = document.getElementById('galleryModalImg');
+        const modalCaption = document.getElementById('galleryCaption');
+        let currentIndex = 0;
+
+        function showImage(index) {
+            const img = galleryImgs[index];
+            modalImg.src = img.src;
+            modalCaption.textContent = img.alt;
+            currentIndex = index;
+            modal.show();
+        }
+
+        galleryImgs.forEach((img, idx) => {
+            img.addEventListener('click', () => showImage(idx));
+        });
+
+        document.getElementById('prevImg').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
+            showImage(currentIndex);
+        });
+
+        document.getElementById('nextImg').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryImgs.length;
+            showImage(currentIndex);
+        });
+    </script>
 
 </body>
 
