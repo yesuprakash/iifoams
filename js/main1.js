@@ -17,30 +17,6 @@
                 animateOut: "fadeOut",
                 animateIn: "fadeIn"
             });
-
-            function restartAnimations($item) {
-                $item.find(".animate__animated").each(function () {
-                    const $el = $(this);
-                    const animateClasses = ($el.attr("class") || "")
-                        .split(" ")
-                        .filter(c => c.startsWith("animate__"));
-                    if (!animateClasses.length) return;
-
-                    // Remove then force reflow, then re-add to replay the animation
-                    $el.removeClass(animateClasses.join(" "));
-                    void this.offsetWidth;
-                    $el.addClass(animateClasses.join(" "));
-                });
-            }
-
-            // Play animations on first visible slide
-            restartAnimations($carousel.find(".owl-item.active"));
-
-            // Replay animations every time the slide finishes changing
-            $carousel.on("translated.owl.carousel", function (e) {
-                const $active = $(e.target).find(".owl-item").eq(e.item.index);
-                restartAnimations($active);
-            });
         });
 
         
